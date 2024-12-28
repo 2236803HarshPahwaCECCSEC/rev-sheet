@@ -1,5 +1,5 @@
 class Solution {
-public:
+public://possible when array is sorted
     vector<int> twoSum(vector<int>& numbers, int target) {
         // vector<int> index;
         int left=0;
