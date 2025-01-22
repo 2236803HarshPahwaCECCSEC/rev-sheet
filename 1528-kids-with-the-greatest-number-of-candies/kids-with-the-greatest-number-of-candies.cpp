@@ -8,6 +8,7 @@ public:
             if(sum>=maxel){
                 res.push_back(true);
             }else res.push_back(false);
+            
         }
         return res;
     }
