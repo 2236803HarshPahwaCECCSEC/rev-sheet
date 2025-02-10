@@ -12,7 +12,7 @@ class Solution {
 public:
     int length(ListNode* head){
         if(head==NULL) return 0;
-        int len=0;
+        int len=1;
         ListNode* temp=head;
         while(temp!=NULL){
             len++;
@@ -28,7 +28,7 @@ public:
             temp=temp->next;
         }
          if(temp == NULL) return head;
-        int lastpos=length(head)-orignalK;
+        int lastpos=length(head)-orignalK-1;//5-2==3
         while(lastpos--&&start!=NULL){
             start=start->next;
         }
