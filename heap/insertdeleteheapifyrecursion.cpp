@@ -71,6 +71,10 @@ void heapify(int *arr,int size,int index){
         heapify(arr,size,index);
     }
 }
+void buildheap(int arr[],int n){
+  for(int index=n/2;index>0;index--){
+      heapify(arr,n,index);
+  }}
 int main() {
   cout << "Creation of heap" << endl;
   Heap h(6);
