@@ -75,18 +75,38 @@ void buildheap(int arr[],int n){
   for(int index=n/2;index>0;index--){
       heapify(arr,n,index);
   }}
+void heapsort(int arr[],int n){
+  while(n!=0){
+    swap(arr[1],arr[n]);
+    n--;
+    heapify(arr,n,1);
+  }
+}
 int main() {
-  cout << "Creation of heap" << endl;
-  Heap h(6);
-  h.insert(10);
-  h.insert(20);
-  h.insert(5);
-  h.insert(11);
-  h.insert(6);
-  h.printHeap();
+  // cout << "Creation of heap" << endl;
+  // Heap h(6);
+  // h.insert(10);
+  // h.insert(20);
+  // h.insert(5);
+  // h.insert(11);
+  // h.insert(6);
+  // h.printHeap();
+  // cout<<endl;
+  // cout<<h.deletefromheap();
+  // cout<<endl;
+  // h.printHeap();
+  int arr[]={-1,5,10,15,20,25,12};
+  int n=6;
+  buildheap(arr,n);
+  cout<<"printing heap"<<endl;
+  for(int i=1;i<=6;i++){
+    cout<<arr[i]<<" ";
+  }
   cout<<endl;
-  cout<<h.deletefromheap();
-  cout<<endl;
-  h.printHeap();
+  heapsort(arr,n);
+  cout<<"printing array ele"<<endl;
+  for(int i=1;i<=n;i++){
+    cout<<arr[i]<<" ";
+  }
   return 0;
 }
