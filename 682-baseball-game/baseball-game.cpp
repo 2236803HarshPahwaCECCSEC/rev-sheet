@@ -7,8 +7,7 @@ public:
                 int top1=st.top();
                 st.pop();
                 int top2=st.top();
-                st.pop();
-                st.push(top2);
+
                 st.push(top1);
                 st.push(top1+top2);
             }else if(str=="D"){
