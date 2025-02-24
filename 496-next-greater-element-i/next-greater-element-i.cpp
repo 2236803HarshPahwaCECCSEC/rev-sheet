@@ -4,7 +4,7 @@ public:
      unordered_map<int,int>mp;
      stack<int>st;
      for(int i=nums2.size()-1;i>=0;i--){
-        while(!st.empty()&&st.top()<nums2[i]){
+        while(!st.empty()&&st.top()<=nums2[i]){
             st.pop();
         }
         if(!st.empty()) mp[nums2[i]]=st.top();
